@@ -14,6 +14,11 @@ module.exports = function check(str, bracketsConfig) {
                 result.push(index)
             }
         } 
+        else {
+            if (result.pop() !== index-1){
+                return false;
+            }
+        }
     }
         return result.length === 0
 }
